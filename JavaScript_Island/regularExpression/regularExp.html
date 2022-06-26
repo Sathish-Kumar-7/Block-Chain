@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RegularExpression</title>
+    <script>
+        function validate(){
+            var email = document.getElementById("email").innerHTML
+            var reg = /^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,8})(\.[a-z]{2,8})?$/
+            if(reg.test(email)){
+                document.write("Lol")
+                return true
+                }
+            else{
+                document.write("Yeah")
+                return false
+                }
+        }
+    </script>
+</head>
+<body>
+      <input id="email" name="email" placeholder="Email">
+      <button name="Submit" onclick="validate()">Submit</button>
+</body>
+</html>

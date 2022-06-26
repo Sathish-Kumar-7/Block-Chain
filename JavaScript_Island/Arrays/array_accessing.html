@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array Accessing</title>
+</head>
+<body>
+    <p id="accessing"/>
+</body>
+    <script type="text/javascript">
+        let array = ["Apple","Banana","Orange"];
+        document.getElementById("accessing").innerHTML = array[2];
+        document.write("<br>"+array.length)
+        array.forEach(
+            (item,index,array) =>
+                {
+                    document.write("<br>"+index + " " + item);
+                }
+        )
+    </script>
+</html>

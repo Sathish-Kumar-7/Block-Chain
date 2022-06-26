@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Object</title>
+</head>
+<body>
+<script>
+    var student = {
+    name:"Sathish",
+    age:21,
+    studies:"Computer Science"
+    };
+    document.write(student.name);
+
+    student = new Object()
+    student.name = "Sarah";
+    student.age=21;
+    student.studies = "Computer Science"
+    document.write("<br>"+student.studies);
+
+    function stud(name,age,studies){
+    this.name = name,
+    this.age = age,
+    this.studies = studies
+    }
+    student = new stud("Sathish",21,"CSE")
+    document.write("<br>"+student.age)
+
+    function showDetails(){
+        alert("Hello")
+    }
+    student.display = showDetails;
+
+    student = {
+    name:"Sathish",
+    get fame(){
+        return this.name;
+    },
+    set fame(name){
+        this.name = name;
+    },
+    age:21,
+    studies:"Computer Science"
+    };
+    student.fame="Sarah";
+    document.write("<br>"+student.fame);
+    </script>
+</body>
+</html>

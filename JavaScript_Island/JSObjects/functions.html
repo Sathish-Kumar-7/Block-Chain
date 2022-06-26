@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Functions</title>
+</head>
+<body>
+    <script>
+        function sayHi(){
+            document.write("<br>Hello");
+        }
+        sayHi();
+
+       var x = function(a,b){
+        document.write("<br>"+(a+b));
+       }
+       x(4,5);
+       var y = new Function("a","b","a++;b++;return a+b");
+       document.write("<br>"+y(5,7));
+
+<!--       Arrow Function-->
+    x = (a,b,c) => {
+    document.write("<br>"+a+" ");
+    document.write(b+" ");
+    document.write(c+" ");
+    return a+b+c;
+    }
+    document.write(x(1,2,3));
+
+<!--    Generator Function-->
+        function* generatorFunc(){
+            yield 5;
+            yield 7;
+        }
+        x = generatorFunc();
+        document.write("<br>"+x.next().value);
+        document.write("<br>"+x.next().value);
+    </script>
+</body>
+</html>

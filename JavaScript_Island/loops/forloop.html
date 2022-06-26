@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>For Loop</title>
+</head>
+<body>
+    <script>
+            document.write("For Loop")
+            let x;
+            for(x=0;x<5;x++){
+                document.write("<br>"+ (x+1));
+            }
+            let array = new Array();
+            for(x=0;x<10;x++){
+                array.push(x+1);
+            }
+            document.write("<br>" + array);
+
+            array = []
+            for(x=0;x<10;x++){
+                if(x%2==0)
+                    continue;
+                array.push(x+1);
+            }
+            document.write("<br>" + array);
+
+            array = []
+            for(x=0;x<10;x++){
+                if((x+1)%6==0)
+                    break;
+                array.push(x+1);
+            }
+            document.write("<br>" + array);
+    </script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array Methods</title>
+</head>
+<body>
+    <script type="text/javascript">
+        let array = new Array("Red","Green","Blue");
+
+        document.write("<br>Array String <br>");
+        let arraystr = array.toString();
+        document.write(arraystr +" <b>Type:</b> "+typeof(arraystr)+ "<br>")
+
+        document.write("<br>push method<br>");
+        array.push("Yellow");
+        document.write("Array : "+array+"<br>")
+
+        document.write("<br>pop method<br>");
+        let popItem = array.pop();
+        document.write("Array : "+array+"<br>" + "Pop Item: "+popItem +"<br>")
+
+        document.write("<br>join method<br>");
+        document.write("Array : "+array.join(" | ")+"<br>")
+
+        document.write("<br>shift method<br>");
+        array.shift();
+        document.write("Array : "+array+"<br>")
+
+        document.write("<br>unshift method<br>");
+        array.unshift("Red");
+        document.write("Array : "+array+"<br>")
+
+        document.write("<br>length property<br>");
+        document.write("Array Size : "+array.length+"<br>")
+
+        document.write("<br>concat method<br>");
+        let carray = array.concat(array);
+        document.write("Array : "+carray+"<br>")
+
+        document.write("<br>slice method<br>");
+        document.write("Array : "+array.slice(0,2)+"<br>")
+
+        document.write("<br>splice method<br>");
+        array.splice(2,0,"Black","White");
+        document.write("Array : "+array+"<br>");
+
+        document.write("<br>sort method<br>");
+        array.sort();
+        document.write("Array : "+array+"<br>")
+
+        document.write("<br>reverse method<br>");
+        array.reverse();
+        document.write("Array : "+array+"<br>")
+
+        document.write("<br>map method<br>");
+        let mapArray = array.map(demo1);
+        function demo1(value){
+            return value + " " + value.length;
+        }
+        document.write("Array : "+mapArray+"<br>")
+
+        document.write("<br>Filter method<br>");
+        let filterArray = array.filter(demo2);
+        function demo2(value){
+            return value.length > 4;
+        }
+        document.write("Array : "+filterArray+"<br>")
+
+        document.write("<br>reduce method<br>");
+        let reduceValue = array.reduce(demo);
+        function demo(total,value){
+            return total + " | " + value;
+        }
+        document.write("Reduce Value : "+reduceValue+"<br>")
+    </script>
+</body>
+</html>
